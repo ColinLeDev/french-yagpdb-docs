@@ -34,9 +34,9 @@ _Les paramètres de commande_ ne sont pas affectés par les préfixes. Par exemp
 
 **Include current and future channels from the following categories:** Sélectionnez une liste de catégories, tous les salons de cette catégorie seront affectés par les paramètres (dont ceux qui seront ajoutés plus tard).
 
-**Require one of these roles:** Sélectionnez une liste de rôles requis pour utiliser les commandes des paramètres.
+**Require one of these roles:** Sélectionnez une liste de rôles requis pour utiliser les commandes.
 
-**Ignore users with one of these roles:** Sélectionnez une liste de rôles qui ne pourront pas utiliser les commandes des paramètres.
+**Ignore users with one of these roles:** Sélectionnez une liste de rôles qui ne pourront pas utiliser les commandes.
 
 **All commands enabled**: Activez toutes les commandes pour ces paramètres, vous pouvez créer des paramètres de commande pour une personnalisation.
 
