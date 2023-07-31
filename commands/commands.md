@@ -1,41 +1,45 @@
+---
+description: Paramètres de commande
+---
+
 # Command Settings
 
-## Prefix
+## Préfixe
 
-The prefix is by default `-` The first thing you see when you open the command page is the prefix, you can replace this with your own unique prefix if you would like. Be sure to hit the save button afterwards. Only commands have a designated prefix.
+Le préfixe par défaut est `-` La première chose que vous voyez en ouvrant la page des commandes est le préfixe, vous pouvez le remplacer avec le votre si vous le souhaitez. Assurez vous de sauvegarder en appuyant sur le bouton "Save". Seules les commandes ont un préfixe désigné (pas les commandes personnalisées ni les commandes slash)
 
 {% hint style="warning" %}
-**Flags and switches** are _not_ affected by prefixes. For example, if you were using the `rolemenu create` command with the prefix `+`, it would be`+rolemenu create (group name) -m (message id)`. Note that we used the `+` prefix but `-m` stayed as `-m`, not `+m`.
+_Les paramètres de commande_ ne sont pas affectés par les préfixes. Par exemple, la commande `rolemenu create` avec le préfixe `+`, ce sera`+rolemenu create (group name) -m (message id)`. Notez que nous avons utilisé le préfixe `+` mais que `-m` est resté `-m`, et n'est pas devenu`+m`.
 {% endhint %}
 
-## Command Override
+## Command Override - Paramètres de commande&#x20;
 
-![To create a command override look for the box that says New command override](../.gitbook/assets/CommandOverride.PNG)
+![Pour créer une nouvelle règle, cherchez le bouton New command override](../.gitbook/assets/CommandOverride.PNG)
 
-**Apply to the following commands:** Once you are in the box, you can select which command you want to override to apply to. __&#x20;
+**Apply to the following commands:** Vous pouvez choisir dans ce menu à quelle commande ce paramètre va s'appliquer.
 
-**Specific commands enabled in this command override:** You can then toggle whether or not to enable or disable the command with this override. (Enable this if you have the command disabled in the global settings)
+**Specific commands enabled in this command override:** Vous pouvez choisir si vous voulez activer ou non la commande avec ce paramètre. (Activez ceci si vous avez la commande désactivée dans les paramètres globaux)
 
-**Auto delete trigger/response:** Toggle to enable/disable the auto delete for the trigger and response respectively and assign it a time to wait until deleting (1-60 Seconds).
+**Auto delete trigger/response:** Activez pour supprimer le message déclencheur ou le message de réponse et assignez y un temps de latence (entre 1 et 60 secondes).
 
-**Require one of these roles:** Choose to require someone to have a role in order to use the commands.
+**Require one of these roles:** Vous pouvez définir une liste de rôles requis pour utiliser la commande (un parmi la liste).
 
-**Ignore users with one of these roles:** Choose to ignore someone who has a role and prevent them from using the command.
+**Ignore users with one of these roles:** Vous pouvez définir une liste de rôles bannis de l'utilisation de la commande.
 
-## Channel Override
+## Channel Override - Paramètres de salon
 
 ![Look to the top right on your screen for a box that says New channel override.](../.gitbook/assets/ChannelOverride.PNG)
 
-**Channels this override affects:** Select which channels you want the override to apply to.&#x20;
+**Channels this override affects:** Sélectionnez une liste de salons dans lesquels les paramètres s'appliqueront.
 
-**Include current and future channels from the following categories:** By picking a category, you apply this override to all the channels in the category which includes future channels .
+**Include current and future channels from the following categories:** Sélectionnez une liste de catégories, tous les salons de cette catégorie seront affectés par les paramètres (dont ceux qui seront ajoutés plus tard).
 
-**Require one of these roles:** Choose to require someone to have a role in order to use the commands.
+**Require one of these roles:** Sélectionnez une liste de rôles requis pour utiliser les commandes des paramètres.
 
-**Ignore users with one of these roles:** Choose to ignore someone who has a role and prevent them from using it.
+**Ignore users with one of these roles:** Sélectionnez une liste de rôles qui ne pourront pas utiliser les commandes des paramètres.
 
-**All commands enabled**: Enable all the commands for this override, you can create command override for the channel overrides below if you wish to customize further.
+**All commands enabled**: Activez toutes les commandes pour ces paramètres, vous pouvez créer des paramètres de commande pour une personnalisation.
 
-**Auto delete trigger/response:** Toggle to enable/disable the auto delete for the trigger and response respectively and assign it a time to wait until deleting (1-60 Seconds).
+**Auto delete trigger/response:** Activez pour supprimer le message déclencheur ou le message de réponse et assignez y un temps de latence (entre 1 et 60 secondes)..
 
-**New command override:** Create a command override that will apply to all the channels in the channel override. For help on creating command overrides, refer to [Command override.](commands.md#command-override)&#x20;
+**New command override:** Créer un paramètre de commande qui s'appliquera dans les salons du paramètre. Pour avoir de l'aide sur la création de paramètre de commande, référez-vouz à la section [#command-override-parametres-de-commande](commands.md#command-override-parametres-de-commande "mention")[.](commands.md#command-override)

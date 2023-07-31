@@ -1,33 +1,36 @@
-# Getting Started
+# Se lancer
 
 {% hint style="info" %}
-&#x20;You can add and manage the bot if you have the **Manage Server** permission.
+Vous pouvez ajouter le bot si vous avez la permission **Gérer le serveur (Manage Server)** sur le serveur.
 {% endhint %}
 
-## Setup
+## Installation/Ajout
 
-The setup for YAGPDB is pretty simple.
+L'installation/L'ajout de YAGPDB est plutôt simple.
 
-1. Go to [yagpdb.xyz/manage](https://yagpdb.xyz/manage)
-2. Click on **Login**
-3. Authorize YAGPDB.xyz to know what servers you are on.&#x20;
-4. On the upper-right-corner, you can select your server by clicking on **Select a server** and selecting the server you want to add the bot to and manage.
+1. Allez sur [yagpdb.xyz/manage](https://yagpdb.xyz/manage)
+2. Cliquez sur **Login**
+3. Autorisez YAGPDB.xyz à savoir sur quel serveur vous êtes.
+4. Dans le coin en haut à droite, vous pouvez sélectionner "**Select a server**" et choisir le serveur sur lequel vous voulez ajouter le bot et le configurer.
 
-You should start out by visiting the commands tab, making sure the prefix does not have any conflict as well as turn on and off any command(s) you may not want to be used.&#x20;
+Vous devriez commencer par visiter l'onglet des commandes, en vous assurant que le préfixe n'a pas de conflit, ainsi qu'activer et désactiver toute commande que vous ne souhaitez peut-être pas utiliser.
 
-If you're interested in setting notifications like _Join/Leave, YouTube, Reddit, Streaming notifications._ You should look under the **Notifications & Feeds** tab.&#x20;
+Si vous souhaitez définir des notifications telles que Rejoindre/Quitter (Join/Leave), YouTube, Reddit, Notifications de streaming (Streaming Notifications). Vous devriez regarder la page [Broken link](broken-reference "mention").
 
-For _moderation tools, auto-moderation tools, auto roles, self assigning roles_ visit the **Tools & Utilities** tab.&#x20;
+Pour les outils de modération, d'auto-modération, les rôles assignés automatiquement, auto-assignables, regardez la page [Broken link](broken-reference "mention").
 
-* **Moderation** can help you keep track of offences with warnings, and a moderation log.&#x20;
-* **Auto-moderation** can help you keep track of bad words, bad websites, spam, mention spam, invite posting, bad nickname/names etc.&#x20;
-* **Auto role** can help with assigning roles when members join.&#x20;
-* **Role commands** can help with members assigning roles to themselves through either commands or reactions.&#x20;
+* L'outil **Moderation** peut vous aider à garder en mémoire les infractions avec des avertissements, et un historique de modération.
+* L'outil **Auto-moderation** peut vous aider à garder une trace des détections de mots bannis, de liens de site bannis, de spam[^1], d'invitations postées, de pseudos/noms interdits, etc.
+* L'outil **Auto role** canpeut vous aider à automatiquement donner des rôles lorsque des gens rejoignent.
+* L'outil **Role commands** peut vous aider à permettre à vos membres à choisir des rôles et à se les donner, avec soit via des commandes soit via des réactions.
 
-For a _soundboard or reputation_, check out the **Fun** tab.&#x20;
+Pour une _soundboard_ ou un _système de réputation_, consultez la page [Broken link](broken-reference "mention").
 
-Click through the various pages and explore a little to see what the bot offers. If you need help read around in the control panel, the docs, or our [FAQ ](others/frequent-searches.md)page. If you still need help, you can visit our support server.&#x20;
+Lisez les pages diverses et variées, et explorez la page [frequent-searches.md](others/frequent-searches.md "mention"). Si vous avez toujours besoin d'aide, vous pouvez aller sur le serveur de support.
 
-We have a limited number of volunteer support staff, and we are losing money hosting this bot for you. \*_If you're being rude in the support server, chances are you're gonna get banned.\*_ \
-__\
-__If you wish to help us out, please see the [Helping out](helping-out.md) page.
+Nous avons un nombre limité de volontaire, et nous perdons de l'argent en hébergeant le bot pour vous. \*_Si vous êtes dur, méchant, médisant sur le serveur de support, il y a de grandes chances que vous soyez bannis.\*_\
+
+
+Si vous voulez nous aider, regardez la page [helping-out.md](helping-out.md "mention").
+
+[^1]: Envoi répété d'un message

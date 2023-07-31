@@ -1,10 +1,9 @@
-# Donating
+# Faire un don
 
-Every single dollar donated is put into alleviating the cost of hosting. 
+Chaque dollar donné est utilisé pour alléger les coûts pour l'hébergement.
 
 ## Patreon
 
-Patreon Link: [https://www.patreon.com/yagpdb](https://www.patreon.com/yagpdb)
+Lien du Patreon: [https://www.patreon.com/yagpdb](https://www.patreon.com/yagpdb)
 
-Patreon is the most consistent way for you to support the bot and the best to get rewards from us for supporting the bot; such as premium servers, priority support, and exclusive giveaways. Please take a moment to check out our Patreon and consider donating. 
-
+Patreon est le moyen le plus durable pour nous de soutenir le bot et le meilleur pour obtenir une contrepartie à votre soutien, comme des serveurs premium, un support accéléré, et des cadeaux (giveaways) exclusifs. Merci de prendre un moment pour regarder notre Patreon et considérer une donation.

@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Yet Another General Purpose Discord Bot - Documentation](README.md)
-* [Getting Started](getting-started.md)
-* [Helping out](helping-out.md)
-* [Donating](donating.md)
+* [Se lancer](getting-started.md)
+* [Nous aider](helping-out.md)
+* [Faire un don](donating.md)
 
 ## Core <a href="#commands" id="commands"></a>
 

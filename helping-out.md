@@ -1,29 +1,30 @@
-# Helping out
+# Nous aider
 
-There are several ways you can help in making YAGPDB better!
+Il y a plusieurs moyens pour vous de rendre YAGPDB meilleur !
 
-* Supporting us through Patreon
-* Writing documentation. The bot needs documentation - More details below
-* Help out other people on Discord
-* Writing code.
+* Nous aider via Patreon
+* Ecrire de la documentation. Le bot en a besoin - Plus de détails ci-dessous
+* Aider d'autres utilisateur sur le Discord
+* Ecrire du code pour le bot.
 
-## Writing the documentation
+## Ecrire de la documentation
 
-YAGPDB is one of the more complicated bots out there. Therefore, a lot of documentation is needed for people to fully utilize and understand the features the bot provides.
+YAGPDB est un des bots les plus compliqués disponible. Du coup, beaucoup de documentation est nécessaire pour que les utilisateurs puissent bien comprendre les fonctionnalités que le bot offre.
 
-If you're interested in adding things to the documentation, contact us on our [support server](https://discord.gg/GcpyYh3).
+Si ajouter des choses à la documentation vous intéresse, contactez-nous sur notre [serveur de support](https://discord.gg/GcpyYh3).
 
-## Writing code for the bot
+## Ecrire du code pour le bot
 
-You can also write code for the bot - it's open source. The bot is written in [Go](https://golang.org/) and you can view its code on [GitHub](https://github.com/jonas747/yagpdb). Please only add features if you really know how to write code in go. If you don't know how to change files on GitHub, watch [this tutorial](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
+Vous pouvez écrire du code pour le bot - il est [open source](#user-content-fn-1)[^1]. Le bot est codé en [Go](https://golang.org/) et vous pouvez voir le code sur [GitHub](https://github.com/jonas747/yagpdb). Merci de n'ajouter du code que si vous savez vraiment coder en Go. Si vous ne savez pas comment modifier des fichiers sur GitHub, regardez [ce tutoriel en anglais](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 
-## Helping out on the support server
+## Aider sur le serveur de support
 
-If you are knowledgeable about the bot and you want to help others then join the [support server](https://discord.gg/GcpyYh3) and start helping out. If you are active and helpful on the server, we may ask you to come on board as a support staff.
+Si vous comprenez bien le bot et que vous voulez aider les autres utilisateurs, alors rejoignez le [serveur de support](https://discord.gg/GcpyYh3) et commencez à aider. Si vous êtes actif et que vous aidez, nous pourrions vous demander de venir avec nous en tant que staff du support.
 
-Alternatively, if you think you meet the following requirements, you can fill in this application form [here](https://forms.gle/FtnaLVcFgVFvXGQ9A).
+Sinon, si vous pensez que vous remplissez les conditions, vous pouvez remplir [ce formulaire **en anglais**](https://forms.gle/FtnaLVcFgVFvXGQ9A).
 
-* Been on the server and active for at least 2 weeks
-* Able to show initiative in troubleshooting problems and handling general queries
-* Able to deal with circumstances on your own and trust your own judgments
+* Être sur le serveur et actif pour au moins 2 semaines
+* Capacité à montrer de l'initative dans la résolution de problème et dans la réponse à des requêtes générales
+* Aptitude à gérer les évènements et leurs circonstances et à avoir confiance en vos jugements
 
+[^1]: L'open-cource est le fait de laisser son code public, et à libre disposition de tous
