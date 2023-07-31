@@ -38,7 +38,7 @@ _Les paramètres de commande_ ne sont pas affectés par les préfixes. Par exemp
 
 **Ignore users with one of these roles:** Sélectionnez une liste de rôles qui ne pourront pas utiliser les commandes.
 
-**All commands enabled**: Activez toutes les commandes pour ces paramètres, vous pouvez créer des paramètres de commande pour une personnalisation.
+**All commands enabled**: Activez toutes les commandes dans ces salons, vous pouvez créer des paramètres de commande pour une personnalisation.
 
 **Auto delete trigger/response:** Activez pour supprimer le message déclencheur ou le message de réponse et assignez y un temps de latence (entre 1 et 60 secondes)..
 
