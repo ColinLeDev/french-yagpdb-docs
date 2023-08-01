@@ -1,30 +1,27 @@
-# Notification Feed
+# Flux de notification
 
-## General Feed
+## General Feed - Flux général
 
-![Make sure to enable the feeds you want to use!](../.gitbook/assets/Notification.PNG)
+![Assurez vous d'activer les flux que vous utilisez !](../.gitbook/assets/Notification.PNG)
 
 ### Join Message
 
-**Channel:** Choose what channel you want the bot to announce the message in.\
-**Message:** Write the message that you want the bot to say when someone joins.&#x20;
+**Channel:** Choisissez dans quel salon le bot annoncera l'arrivée.\
+**Message:** Quel message le bot enverra lors de l'arrivée.
 
 ### Leave Message
 
-**Channel:** Choose what channel you want the bot to announce the message in.\
-**Message:** Write the message that you want the bot to say when someone leaves.&#x20;
+**Channel:** Choisissez dans quel salon le bot annoncera le départ.\
+**Message:** Quel message le bot enverra lors du départ.
 
 ### Join Message in Direct Message
 
-Write a message that you want the bot to send to the user via DM whenever someone joins your server.
+Ecrivez un message que vous voulez que le bot envoie à l'utilisateur en privé lorsqu'il rejoint votre serveur.
 
 ### Topic Change Message
 
-Choose what channel you want the bot to announce the topic change from a specific channel or the channel that the topic was changed in.&#x20;
+Choisissez dans quels salons vous voulez que le bot annonce les changements de sujet.
 
 {% hint style="info" %}
-Custom command templates are supported for usage in all the notification feeds provided.
+Tous les modèles des commandes personnalisables ne sont pas supportés dans toutes les flux de notification.
 {% endhint %}
-
-
-
