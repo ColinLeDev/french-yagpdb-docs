@@ -9,7 +9,7 @@
 
 * [Command Settings](commands/commands.md)
 * [Custom Commands](commands/custom-commands.md)
-* [All Commands](commands/all-commands.md)
+* [Toutes les commandes](commands/all-commands.md)
 
 ## Notifications & Feeds
 

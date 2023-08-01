@@ -1,205 +1,210 @@
+---
+description: Les commandes personnalisées
+---
+
 # Custom Commands
 
-Custom commands - abbreviated as CCs, allow you to create your own commands. The CC-system in YAGPDB is quite complex and can be used for some advanced stuff, but even CCs are still limited and if your use case is very specific, consider trying or building another bot. Additional reading [here](https://learn.yagpdb.xyz/the-custom-command-interface). Custom Commands have also limits and they are covered [here](https://docs.yagpdb.xyz/reference/custom-commands-limits).
+Les commandes personnalisées - Custom Commands abrégées en CCs en anglais -, vous permette de créer vos propres commandes. Le système de CC de YAGPDB est plutôt complexe et peut être utilisé pour faire des systèmes avancés, mais les CC sont quand même limitées et si votre système est extrêmement spécifique, il faudra peut-être considérer l'utilisation d'un autre bot, ou la création du votre. Vous pouvez aussi consulter le [cette page en anglais](https://learn.yagpdb.xyz/the-custom-command-interface). Les commandes personnalisées ont des limites qui sont expliquées [ici](https://docs.yagpdb.xyz/reference/custom-commands-limits).
 
-## Custom Commands
+## Custom Commands - Commandes personnalisées
 
-To create your first custom command, go to the control panel and select your server. There you click on Commands and Custom Commands.&#x20;
+Pour créer votre première commande personnalisée, allez sur votre panneau de commande, puis cliquez sur **Commands** puis **Custom Commands**.
 
-![The Custom Command Page](../.gitbook/assets/image\_custom\_commands.png)
+![La page de création d'une commande personnalisée](../.gitbook/assets/image\_custom\_commands.png)
 
-### Trigger Types
+### Les types de déclencheur
 
-* **Command**: With this trigger, the message has to start with the prefix for your server (`-` by default) followed by the trigger.
-* **Starts with**: When a message starts with your trigger.
-* **Contains**: When a message contains your trigger.
-* **Regex**: This trigger allows you to use a regex pattern. (Refer to the [Regex page](../reference/regex.md) for help).
-* **Exact match**: When the entire message equals your trigger.
-* **Reaction:** CC is triggered by reactions.
-* **Hourly interval**: This wi~~l~~l trigger after specified time given in hours. User can exclude certain hours and also weekdays. Channel must be selected for this trigger to work.
-* **Minute interval**: Like hourly interval, the specified time is just in minutes starting from 5 min as minimum.
+* **Command**: Avec ce déclencheur, le message déclencheur doit commencer par le préfixe de votre serveur (`-` par défaut) suivi par le texte déclencheur.
+* **Starts with**: Quand le message commence par le texte déclencheur.
+* **Contains**: Quand le message contient le déclencheur.
+* **Regex**: Ce déclencheur vous permet d'utiliser une [expression régulière](#user-content-fn-1)[^1]. (Vous pouvez consulter la page [regex.md](../reference/regex.md "mention") pour de l'aide).
+* **Exact match**: Quand le message entier correspond à votre déclencheur.
+* **Reaction:** La CC est déclenchée par la réaction à un message.
+* **Hourly interval**: Une commande avec ce déclencheur s'exécutera après un temps spécifié en heures, vous pouvez exclure certaines heures et jours de la semaine. Un salon soit être sélectionné pour que ce déclencheur fonctionne.
+* **Minute interval**: Comme pour le "**Hourly interval**", sauf que le temps est en minute et doit être au minimum de 5 minutes.
 
-#### Case Sensitivity
+#### Case Sensitivity - Sensibilité à la casse
 
-As you might have seen, there is an option called _Case sensitive_. This option makes your trigger case-sensitive. The trigger heLLo with case sensitivity on will only trigger if somebody says `heLLo` but not if someone says `hello`.
+Comme vous l'avez sûrement remarqué, il y a une option _Case sensitive_. Cette option rend votre déclencheur sensible à la casse. Le déclencheur heLLo avec l'option activée se déclenchera si une personne écrit `heLLo` mais pas si elle dit `hello`.
 
-### Restrictions to roles or channels
+### Restrictions to roles or channels - Restrictions de rôles et salons
 
-You can restrict or block custom commands to specific roles or channels. For this you have to select the corresponding checkbox and select the roles/channels you want it to apply too.
+Vous pouvez restreindre ou bloquer l'exécution de CC à des rôles ou salons spécifiques. Pour cela, sélectionner la case à cocher correspondante et sélectionnez les rôles/salons selon vos besoins.
 
-![This custom command can be executed by people that either have Coll Dog, Guy-in-charge or both.](../.gitbook/assets/image\_custom\_commands\_restrictions.png)
+![Cette commande personnalisée peut être exécutée par les personnes qui ont soit le rôle Coll Dog, soit Guy-in-charge ou les deux.](../.gitbook/assets/image\_custom\_commands\_restrictions.png)
 
 {% hint style="warning" %}
-If you select the**`Require at least one of the`**or**`Only run in the`** Options, make sure to always have a role/channel selected otherwise the bot won't respond to your commands.
+Si vous sélectionnez les options \*\*`Require at least one of the`**ou**`Only run in the`\*\*, assurez-vous d'avoir au minimum un rôle/salon de sélectionné, sinon, le bot ne réagira pas à vos commandes.
 {% endhint %}
 
-### Restrictions and limitations
+### Restrictions et limitations
 
-With custom commands there are some limitations:
+Les commandes personnalisées ont quelques limites :
 
-* You can't create more than 100 active custom commands (250 with YAGPDB Premium)
-* You can't execute more than five commands from a custom command using `execAdmin` or `exec`
-* Direct Messages can be only sent with a side note from which server they're coming
-* Custom Command responses can't be longer than 2000 characters (this is a limitation by Discord).
-* A Custom command itself can't be longer than 10 000 characters (this is total count of characters and sum of all subset custom command's responses of 20), also leave/join messages limit is 5000.
-* Custom Commands have [limits](https://docs.yagpdb.xyz/reference/custom-commands-limits).
-* No more than 3 custom commands may be executed from a single message for non-premium. The limit is 5 for premium servers.
+* Vous ne pouvez pas créer plus de 100 commandes personnalisées activées en même temps (250 avec YAGPDB Premium)
+* Vous ne pouvez pas exécuter plus de 5 commandes depuis une commande personnalisée en utilisant `execAdmin` ou `exec`
+* Les messages privés ne peuvent être envoyés qu'avec une note qui indique le serveur de provenance du message privé
+* Les réponses des Commandes personnalisées ne peuvent pas excéder 2000 caractères (c'est une limite de Discord).
+* La commande elle-même ne peut pas être plus longue que 10 000 caractères (c'est une somme de tous les caractères et une somme de tous les comptes des [sous-parties des commandes](#user-content-fn-2)[^2]), et la limite des messages lorsqu'une personne rejoint/quitte le serveur est de 5000 caractères.
+* Les commandes personnalisées ont des [limites](https://docs.yagpdb.xyz/reference/custom-commands-limits).
+* Pas plus de 3 commandes personnalisées peuvent être exécutées depuis un seul message pour les serveurs non premium. La limite est de 5 pour les serveurs premium.
 
-## Advanced Custom Commands&#x20;
+## Advanced Custom Commands - Commandes personnalisées avancées
 
 {% hint style="info" %}
-Some basic coding knowledge may be required to use some of these features.&#x20;
+Quelques bases en codage peuvent être requises pour utiliser ces fonctionnalités.
 {% endhint %}
 
-### Using templates in custom commands
+### Utiliser des modèles dans les commandes personnalisées
 
-If you wish to do anything more than a _"Type in a command" -> "Make the bot say something._ Such as assigning people roles, getting information on the person calling the command, writing messages in other channels, and many others. It is recommended that you check out this page:
+Si vous souhaitez faire plus que _"Faîtes une commandes" -> "Faire répondre quelque chose au bot_"_._ Comme assigner des rôles aux personnes, récupérer des informations sur les personnes qui exécutent des commandes, envoyer des messages dans d'autres salons, et plus encore. Il est recommandé de consulter cette page :
 
 {% content-ref url="../reference/templates/" %}
 [templates](../reference/templates/)
 {% endcontent-ref %}
 
-### Require arguments
+### Arguments requis
 
-As of v1.12 there's a simple set of functions available for you to manage arguments, they are:
+Depuis la v1.12 il y a un ensemble de fonctions assez simple pour gérer les arguments,  l'ensemble est :
 
-```
-{{$args := parseArgs num-required-args "Custom usage text when invalid args provided"
-    (carg "int" "name of arg1")
-    (carg "string" "name of arg2")
-    (more args can be added aswell...)}}
+```go
+{{$args := parseArgs nombre-arg-requis "Texte affiché lorsque les arguments sont incorrects"
+    (carg "int" "nom de l'arg1")
+    (carg "string" "nom de l'arg2")
+    (plus d'arguments peuvent être ajoutés...)}}
 ...
 
-{{$args.Get 0}} {{/* <- will have the first arg */}}
-{{$args.Get 1}} {{/* <- will have the second arg */}}
+{{$args.Get 0}} {{/* <- pour obtenir le premier argument */}}
+{{$args.Get 1}} {{/* <- pour obtenir le second argument */}}
 ```
 
-The execution will stop at wherever you placed "**parseArgs**" if incorrect args are passed.
+L'exécution de la commande s'arrêtera au moment où "**parseArgs**" est écrit si jamais des arguments incorrects sont passés.
 
-"**carg**" has the following syntax:
-
-```
-{{carg "type" "name" additional-options-depending-on-type}}
-```
-
-Available types and options are:
-
-* **channel -** channel id/mention, will have the type of _\*templates.CtxChannel_ (see [templates ](../reference/templates/#channel)for more info). Threads are not supported
-* **duration** - converts given integer number starting from minutes or string with modifier (s, m, h, w etc)  to type Duration - e.g. 10 is 10m0s and 123s is 2m3s (type _time.Duration_ is represented as an _int64_ nanosecond count - so 5s would be 5000000000). Has additional options after the name for min and max range of duration presented in nanoseconds.
-* **float -** decimal numbers, you can also optionally specify min and max after the name similar to **int**. It is parsed as _float64_ datatype.
-* **int -** whole numbers, you can also optionally specify min and max after the name. For example\
-  `{{carg "int" "integer" 2 9}}` required argument has to be a number from 2 to 9.
-* **member** - accepts userID/mention. Gives guild's member struct (object) to use later with .Member methods, like .JoinedAt. (see [templates ](../reference/templates/#member)for more info).
-* **role** - matches an id or name of a role and returns a _\*discordgo.Role_ type [role object](https://discord.com/developers/docs/topics/permissions#role-object).
-* **string -** text. If string-type is the last or only `carg` in `parseArgs` definition, it will take all arguments starting from that point.
-* **user -** user mentions, will have the type of User (see [templates ](../reference/templates/#user)for more info).
-* **userid -** user IDs, this user may not exist at all, both mentions and plain IDs are accepted, will have the type of _int64_.
-
-To access the parsed args you use the "**Get**" method on the returned object from **parseArgs**, this function takes in the argument index starting from 0.
-
-Method "**IsSet**" will return a boolean true or false depending on whether the argument was set or not, if this was an optional argument.
-
-Example usage of optional args:
+"**carg**" a la syntaxe suivante:
 
 ```
-{{$args := parseArgs 1 "Custom usage text when invalid args provided"
-    (carg "int" "name of arg1")
-    (carg "string" "name of arg2 (optional)")
-    (more args can be added aswell...)}}
+{{carg "type" "nom" options-additionnelles-selon-le-type}}
+```
+
+Les types et options disponibles sont :
+
+* **channel -** id/mention de salon, l'argument aura le type _\*templates.CtxChannel_ (consultez [templates](../reference/templates/ "mention")[ ](../reference/templates/#channel)pour plus d'infos). Les fils (Threads) ne sont pas supportés.
+* **duration** - converti le nombre donné en minutes ou depuis une chaîne de caractères avec les modificateurs (s, m, h, w etc) vers le type Duration (_Durée_) - ex. 10 = 10m0s et 123s = 2m3s (le type _time.Duration_ est de type _int64_ en nanosecondes - donc 5s sera 5000000000). Il y a deux options additionnelles pour la durée minimum et maximum en nanosecondes.
+* **float -** nombres décimaux, vous pouvez spécifier un minimum et un maximum après le nom comme pour le **int**. Il est traité comme le type _float64_.
+* **int -** Nombre entier, vous pouvez optionnellement spécifier un minimum et un maximum après le nom. Par exemple\
+  `{{carg "int" "entiet" 2 9}}` créera un argument qui devra être un nombre entier compris entre 2 et 9.
+* **member** - accepte un ID utilisateur ou une mention. Il renvoie une structure (_object_) de type membre de serveur à utiliser après avec les méthodes du .Member, comme .JoinedAt. (consultez [templates](../reference/templates/ "mention") pour plus d'informations).
+* **role** - correspond à un ID ou un nom de rôle et retourne un [objet de type rôle](https://discord.com/developers/docs/topics/permissions#role-object) _\*discordgo.Role_.
+* **string -** texte. Si le type **string** est le dernier ou le seul `carg` dans une déclaration`parseArgs`, l'argument prendra tous les autres à partir de celui là.
+* **user -** mention d'utilisateur, aura le type utilisateur (_User_) (consultez [templates](../reference/templates/ "mention") pour plus d'informations).
+* **userid -** ID d'utilisateur, cet utilisateur peut ne pas exister, les mentions et les id complets sont acceptés, aura le type _int64_.
+
+Pour accéder aux arguments, il faudre utiliser la méthode "**Get**" sur l'objet retourné par **parseArgs**, cette fonction prend en argument l'index de l'argument en commençant à 0.
+
+La méthode "**IsSet**" retournera un booléen **true**/**false** selon si l'argument est défini ou non, si c'est unn argument optionnel.
+
+Exemple d'utilisation des arguments optionnels :
+
+```go
+{{$args := parseArgs 1 "Message personnalisé si les arguments sont invalides"
+    (carg "int" "nom de l'arg1")
+    (carg "string" "nom de l'arg2 (optionnel)")
+    (plus d'arguments peuvent être ajoutés...)}}
 ...
 
-{{$args.Get 0}} {{/* <- will have the first arg */}}
-{{or ($args.Get 1) "value if the second arg was not used"}}
-{{if $args.IsSet 1}} only runs if the second argument was provided {{end}}
+{{$args.Get 0}} {{/* <- pour obtenir le premier argument */}}
+{{or ($args.Get 1) "Valeur si le second argument n'est pas défini"}}
+{{if $args.IsSet 1}} s'exécute seulement si le second argument est défini {{end}}
 ```
 
-### The Message template
+### Le modèle Message
 
-You can fetch a message by ID or use the [trigger message](../reference/templates/#message) and get some information about it. Some fields message object has are as follows:\
-
+Vous pouvez récupérer un message avec son ID ou utiliser le [message déclencheur](../reference/templates/#message) et obtenir des informations sur celui-ci. Quelques champs (options) de l'objet message :
 
 Message
 
-| Field                | Type                                                                                | Description                                                                                 |
-| -------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| .Message.ID          | Int                                                                                 | ID of the message                                                                           |
-| .Message.ChannelID   | Int                                                                                 | Channel id this message is in                                                               |
-| .Message.Author      | [User Object](../reference/templates/#user)                                         | Author of the message (User object)                                                         |
-| .Message.Timestamp   | String                                                                              | Timestamp of the message (use .Message.Timestamp.Parse for a time object, otherwise string) |
-| .Message.Attachments | Array of [Attachments](https://docs.yagpdb.xyz/commands/custom-commands#attachment) | Attachments to this message (slice of attachment objects)                                   |
-| .Message.Embeds      | Array of [Embeds](../reference/custom-embeds.md#embeds-in-custom-commands)          | Embeds on this message (slice of embed objects)                                             |
-| .Message.Mentions    | Array of [User Object](../reference/templates/#user)                                | Users this message mentions                                                                 |
-| .Message.Reactions   | Array of [Reactions](https://docs.yagpdb.xyz/commands/custom-commands#reaction)     | Reactions on this message (only available form getMessage)                                  |
-| .Message.Content     | String                                                                              | Text content on this message                                                                |
+| Field                | Type                                                                       | Description                                                                                               |
+| -------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| .Message.ID          | Int                                                                        | ID du message                                                                                             |
+| .Message.ChannelID   | Int                                                                        | ID du salon dans lequel le message est                                                                    |
+| .Message.Author      | [User Object](../reference/templates/#user)                                | Auteur du message (User object)                                                                           |
+| .Message.Timestamp   | String                                                                     | Timestampdu message (utilisez `.Message.Timestamp.Parse` pour un objet _Time_, sinon ce sera un _string_) |
+| .Message.Attachments | Array of [Attachments](custom-commands.md#attachment)                      | Fichiers joints au message (slice d'objets de type attachment)                                            |
+| .Message.Embeds      | Array of [Embeds](../reference/custom-embeds.md#embeds-in-custom-commands) | Embeds sur ce message (slice d'objets de type embed)                                                      |
+| .Message.Mentions    | Array of [User Object](../reference/templates/#user)                       | Les utilisateurs mentionnés dand le message                                                               |
+| .Message.Reactions   | Array of [Reactions](custom-commands.md#reaction)                          | Reactions sur ce message (seulement disponible avec `getMessage`)                                         |
+| .Message.Content     | String                                                                     | Contenu texte du message                                                                                  |
 
 #### Attachment
 
-Either starts with  `(index .Message.Attachments 0).` or a variable with the attachment type.
+Il faut commencer par `(index .Message.Attachments 0).` ou une variable de type **attachment**.
 
-| Field     | Type   | Description                                   |
-| --------- | ------ | --------------------------------------------- |
-| .ID       | Int    | The ID of the attachment                      |
-| .URL      | String | cdn.discordapp.com URL                        |
-| .ProxyURL | String | media.discordapp.com URL                      |
-| .Filename | String | Filename of the attachment                    |
-| .Width    | Int    | Width of the attachment (if image) in pixels  |
-| .Height   | Int    | Height of the attachment (if image) in pixels |
-| .Size     | Int    | Size of the attachment in bytes               |
+| Field     | Type   | Description                                     |
+| --------- | ------ | ----------------------------------------------- |
+| .ID       | Int    | L'ID du fichier joint                           |
+| .URL      | String | URL avec cdn.discordapp.com                     |
+| .ProxyURL | String | URL avec media.discordapp.com                   |
+| .Filename | String | Nom du fichier                                  |
+| .Width    | Int    | Largeur en pixel du fichier, si c'est une image |
+| .Height   | Int    | Hauteur en pixel du fichier, si c'est une image |
+| .Size     | Int    | Taille du fichier, en octet                     |
 
 #### Reaction
 
-Either starts with `(index .Message.Reactions 0)` or a variable with the reaction type.
+Il faut commencer par `(index .Message.Reactions 0)` ou une variable de type reaction.
 
-| Field  | Type                                                            | Description                             |
-| ------ | --------------------------------------------------------------- | --------------------------------------- |
-| .Count | Int                                                             | Times this emoji has been used to react |
-| .Emoji | [Emoji](https://docs.yagpdb.xyz/commands/custom-commands#emoji) | The emoji used in the reaction          |
+| Field  | Type                              | Description                                |
+| ------ | --------------------------------- | ------------------------------------------ |
+| .Count | Int                               | Nombre de fois que cet émoji a été utilisé |
+| .Emoji | [Emoji](custom-commands.md#emoji) | L'émoji utilisé dans la réaction           |
 
 #### Emoji
 
-Either starts with `(index .Message.Reactions 0).Emoji` or a variable of the reaction type.
+Il faut commencer par `(index .Message.Reactions 0).Emoji` ou une varible de type emoji.
 
-| Field     | Type    | Description                                                 |
-| --------- | ------- | ----------------------------------------------------------- |
-| .ID       | Int     | ID of the emoji                                             |
-| .Name     | String  | Name of the emoji (if Unicode emoji this will be the emote) |
-| .Animated | Boolean | Whether the emoji is animated or not                        |
+| Field     | Type    | Description                                                        |
+| --------- | ------- | ------------------------------------------------------------------ |
+| .ID       | Int     | ID de l'émoji                                                      |
+| .Name     | String  | Nom de l'emoji (Si c'est un émoji Unicode, ce sera l'émoji (`😀`)) |
+| .Animated | Boolean | Si l'émoji est animé ou non                                        |
 
-| **Method**       | **Description**                                                                                        |
-| ---------------- | ------------------------------------------------------------------------------------------------------ |
-| `.APIName`       | Returns a correctly formatted API name for use with reaction functions. Example output: `emojiname:id` |
-| `.MessageFormat` | Returns a correctly formatted emoji for use in message content.                                        |
+| **Method**       | **Description**                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `.APIName`       | Retourne un nom d'API correctement formaté utilisable avec les fonctions de réaction. Exemple de sortie : `emojiname:id` |
+| `.MessageFormat` | Retourne un émoji correctement formaté pour l'utilisation dans un message.                                               |
 
-There are [more fields ](https://discordapp.com/developers/docs/resources/channel#reaction-object)which can be used, but they are either obsolete or only used with Global Emotes.\
-Example to fetch the name of the first reaction on a message provided through the `getMessage` template:
+il y a [plus de champs ](https://discordapp.com/developers/docs/resources/channel#reaction-object)qui peuvent être utilisés, mais ils sont soit obsolètes ou alors uniquement utilisés avec les Emotes Globales.\
+Exemple de la récupération de la première réaction sur un message récupéré via la fonction `getMessage` :
 
 ```go
 {{$message := getMessage nil (index .Args 1)}}
 {{if $message}}
-{{if $message.Reactions}}
-Name of the first reaction: {{(index $message.Reactions 0).Emoji.Name}}
-{{else}}No reactions on this message{{end}}
-{{else}}Unknown message{{end}}
+    {{if $message.Reactions}}
+        Nom de la première réaction: {{(index $message.Reactions 0).Emoji.Name}}
+    {{else}}
+        Aucune réaction sur ce message
+    {{end}}
+{{else}}
+    Message inconnu
+{{end}}
 ```
 
-&#x20;
+### Le modèle currentTime
 
-### currentTime template
-
-The currentTime template is very extensive and can be used for displaying the current time, for different time zones, or in embeds in the "timestamp" field.\
+Le modèle currentTime est très complet et peut être utilisé pour afficher l'heure actuelle, pour différents fuseaux horaires, ou dans les embeds dans le champ "timestamp".\
 \
-even more in depth here > [https://golang.org/pkg/time/](https://golang.org/pkg/time/)
+Exploré plus en profondeur ici > [https://golang.org/pkg/time/](https://golang.org/pkg/time/)
 
-{% code title="As timestamp in an embed" %}
+{% code title="Exemple de timestamp dans un embed" %}
 ```go
 {{ $embed := cembed "timestamp" currentTime }}
 ```
 {% endcode %}
 
 ```go
-{{/* golang time formating is POSIX form 0 1 2 3 4 5 6 > Mon 2 Jan 15:04:05 2006 (timezone calculation is omitted) */}}
-{{/* currentTime.UTC.Format "15:04"  > gives current time in UTC */}}
-{{/* ".Add" adds time in nanoseconds, in this example 2 hours have been added for UTC+2 */}}
+{{/* Le formattage du temps en golang est sous la forme POSIX 0 1 2 3 4 5 6 > Mon 2 Jan 15:04:05 2006 (le calcul du fuseau horaire est omis) */}}
+{{/* currentTime.UTC.Format "15:04"  > donne l'heure actuelle dans le fuseau UTC */}}
+{{/* ".Add" ajoute du temps en nanosecondes, dans cet exemple, 2 heures ont été ajoutées pour le fuseau UTC+2 */}}
 {{ $marker := "void" }}
 
 {{ if gt ( toInt ( currentTime.UTC.Format "15" ) ) 12 }}
@@ -208,19 +213,23 @@ even more in depth here > [https://golang.org/pkg/time/](https://golang.org/pkg/
 {{ $marker = "AM" }}
 {{ end }}
 
-{{/* current time in UTC+2 and in 12H format */}}
+{{/* heure actuelle dans le fuseau UTC+2 dans le format 12H */}}
 {{ ( joinStr " " ( ( currentTime.Add 7200000000000 ).Format "3:04"  ) $marker ) }}
 
 It's the {{currentTime.Day}}. of {{currentTime.Month}} in the year {{currentTime.Year}}!
-{{/*Protip: you can put PM in the format string as "3:04PM"
-the variable $marker is there just to show if comparison as well.
-More > https://golang.org/pkg/time/#pkg-constants*/}}
+{{/*Conseil avancé : vous pouvez ajouter PM dans la chaîne de format "3:04PM"
+la variable $marker est là juste pour la comparaison avec la structure if.
+Plus ici > https://golang.org/pkg/time/#pkg-constants*/}}
 ```
 
-### Examples of custom commands
+### Exemples de commandes personnalisées
 
-You can find multiple examples on the YAGPDB Community & Support Server or in this list (with explanations):
+Vous pouvez retrouver quelques exemples sur le serveur communautaire et de support de YAGPDB ou dans cette page (avec des explications) :
 
 {% content-ref url="../reference/custom-command-examples.md" %}
 [custom-command-examples.md](../reference/custom-command-examples.md)
 {% endcontent-ref %}
+
+[^1]: Une expression régulière (Regular Expression, souvent abrégée en regex ou RegEx) décrit un motif, un pattern que nous souhaitons rechercher et localiser dans du texte (y compris des chiffres).
+
+[^2]: Vous pouvez diviser les commandes en plusieurs parties

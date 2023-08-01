@@ -1,36 +1,36 @@
-# All Commands
+# Toutes les commandes
 
-## Legend
+## Legende
 
-`<required arg>` `[optional arg]`
+`<argumment requis>` `[argument optionnel]`
 
-Text arguments containing multiple words needs be to put in quotes ("arg here") or backticks (\`arg here\`) if it's not the last argument and there's more than 1 text argument.
+Les arguments de type texte contenant plusieurs mots doivent être placés entre guillemets ("argument ici") ou accents graves (\`argument ici\`) si ce n'est pas le dernier argument ou s'il y a plus d'1 argument texte.
 
-For example with the poll command if you want the question to have multiple words: `-poll "what's your favourite colour" red blue green2`
+Par exemple avec la commande de sondage : `-poll "Quelle est votre couleur préférée" rouge bleu vert`
 
-Most Debug & Maintenance commands, or commands without any meaningful description are meant for bot owner or serverAdmin only!
+La plupart des commandes sous [#debug-and-maintenance](all-commands.md#debug-and-maintenance "mention"), ou les commandes sans une description complète sont destinées pour le propriétaire du bot, ou les administrateurs de serveur !
 
-If commands are denoted with an accent, tilde `~`, they are not yet deployed in actual YAGPDB bot or have been disabled in main bot,  but are still in master code branch.
+Si une commande est marquée avec la tilde : `~`, elles ne sont soit pas encore déployées dans le bot YAGPDB actuel, ou ont été désactivées dans le bot principal, mais le code est toujours présent dans la branche `main`.
 
-## General ℹ️
+## Général ℹ️
 
 ### Help
 
-**Aliases:** commands/h/how/command
+**Alias:** commands/h/how/command
 
-Shows help about all or one specific command
+Montre l'aide pour une commande spécifique
 
-**Usage:**
+**Utilisation :**
 
 ```
-Help [command:Text]
+Help [commande:Texte]
 ```
 
 ### Info
 
-Responds with bot information
+Répond avec les informations du bot
 
-**Usage:**
+**Utilisation :**
 
 ```
 Info
@@ -38,33 +38,33 @@ Info
 
 ### Invite
 
-Responds with bot invite link
+Répond avec une invitation pour le bot
 
-**Usage:**
+**Utilisation :**
 
 ```
 Invite
 ```
 
-## Tools & Utilities 🔨
+## Outils & Utilitaires  🔨
 
 ### Calc
 
-**Aliases:** c/calculate
+**Alias:** c/calculate
 
-Calculator 2+2=5
+Calculatrice _2+2=5_
 
-**Usage:**
+**Utilisation :**
 
 ```
-Calc <Expression:Text>
+Calc <Expression:Texte>
 ```
 
 ### CReminders
 
-Lists reminders in channel, only users with 'manage server' permissions can use this.
+Liste les rappels dans ce salon, seulement les utilisateurs avec la permission **Gérer le serveur** (_Manage server_) peuvent l'utiliser.
 
-**Usage:**
+**Utilisation :**
 
 ```
 CReminders
@@ -72,81 +72,82 @@ CReminders
 
 ### CurrentTime
 
-**Aliases:** ctime/gettime
+**Alias:** ctime/gettime
 
-Shows current time in different timezones. [Available timezones](https://pastebin.com/ZqSPUhc7)
+Montre le temps actuel dans différents fuseaux horaires. [Available timezones](https://pastebin.com/ZqSPUhc7)
 
-**Usage:**
+**Utilisation :**
 
 ```
-CurrentTime <Offset:Whole number>
-CurrentTime <Zone:Text>
+CurrentTime <Décalage:Nombre entier>
+CurrentTime <Zone:Texte>
 CurrentTime
 ```
 
 ### CustomCommands
 
-**Aliases:** cc
+**Alias:** cc
 
-Shows a custom command specified by id or trigger, or lists them all
+Montre une commande personnalisée spécifiée par son ID ou son déclencheur, ou fait une liste de toutes les commandes
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-CustomCommands <ID:Whole number>
+CustomCommands <ID:Nombre entier>
 CustomCommands <Trigger:Text>
 CustomCommands
 ```
 
 ```
-[-file Sends responses in a file:Switch]
-[-color Use syntax highlighting (GO):Switch]
-[-raw raw:Switch - Force raw output]
+[-file Renvoie la réponse dans un fichier:Switch]
+[-color Utilise la coloration syntaxique (GO):Switch]
+[-raw raw:Switch - Force une sortie brute]
 ```
 
 ### CustomEmbed
 
-**Aliases:** ce
+**Alias:** ce
 
-Creates an embed from what you give it in json form: [https://docs.yagpdb.xyz/others/custom-embeds](https://docs.yagpdb.xyz/others/custom-embeds) Example: `-ce {"title": "hello", "description": "wew"}`
+Crée un embed depuis ce que vous avez fourni en format JSON : [custom-embeds.md](../reference/custom-embeds.md "mention") \
+Exemple : `-ce {"title": "Bonjour", "description": "waw"}`
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-CustomEmbed <Json:Text>
+CustomEmbed <Json:Texte>
 ```
 
 ### DelReminder
 
-**Aliases:** rmreminder
+**Alias:** rmreminder
 
-Deletes a reminder. You can delete reminders from other users provided you are running this command in the same guild the reminder was created in and have the Manage Channel permission in the channel the reminder was created in.
+Supprime un rappel. Vous pouvez supprimer des rappels d'autres utilisateurs, à condition que le rappel ait été créé dans le même serveur que celui dans lequel vous avez exécuté la commande. Il faut que vous ayez la permission **Gérer le salon** (_Manage Channel_) dans le salon dans lequel le rappel a été créé.
 
-**Usage:**
-
-```
-DelReminder <ID:Whole number>
-```
+**Utilisation :**&#x20;
 
 ```
-[-a All:Switch]
+DelReminder <ID:Nombre entier>
+```
+
+```
+[-a Tout:Switch]
 ```
 
 ### Evalcc
 
-executes custom command code (up to 1k characters)
+execute du code de commande personnalisée (jusqu'à 1 000 caractères)
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Evalcc <code:Text>
+Evalcc <code:Texte>
 ```
 
 ### fixscheduledccs
 
-Corrects the next run time of interval CCs globally, fixes issues arising from missed executions due to downtime. Bot Admin Only
+Corrige le temps de la prochaine exécution des CC avec le trigger **interval**, résout les problèmes liés aux exécutions manquées en raison d'un temps d'arrêt. Administrateurs du bot seulement
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 fixscheduledccs
@@ -154,37 +155,37 @@ fixscheduledccs
 
 ### ListRoles
 
-List roles, their id's, color hex code, and 'mention everyone' perms (useful if you wanna double check to make sure you didn't give anyone mention everyone perms that shouldn't have it)
+Liste les roles, leurs ID, leur couleur en format hexadécimal, et si le rôle a la permission **Mentionner @everyone** (_Mention Everyone_) (utile si vous voulez vérifier de nouveau que vous n'avez pas donné la permission de mentionner @everyone à un rôle alors que vous n'auriez pas dû)
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 ListRoles
 ```
 
 ```
-[-nomanaged Don't list managed/bot roles:Switch]
+[-nomanaged Ne liste pas les rôles gérés et les rôles de bots:Switch]
 ```
 
 ### Logs
 
-**Aliases:** log
+**Alias:** log
 
-Creates a log of the last messages in the current channel. This includes deleted messages within an hour (or 12 hours for premium servers)
+Crée un historique des derniers messages dans le salon actuel. Cela inclut les messages supprimés dans l'heure (ou 12 heures pour les serveurs premium)
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Logs [Count:Whole number]
+Logs [Count:Nombre entier]
 ```
 
 ### \~Nicknames
 
-**Aliases:** nn
+**Alias:** nn
 
-Shows past nicknames of a user. Only shows up to the last 25 nicknames.
+Montre les surnoms passés d'un utilisateur. La commande montre uniquement les 25 derniers surnoms.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Nicknames [User:User]
@@ -192,9 +193,9 @@ Nicknames [User:User]
 
 ### Ping
 
-Shows the latency from the bot to the discord servers. Note that high latencies can be the fault of ratelimits and the bot itself, it's not a absolute metric.
+Montre la latence du bot sur le serveur Discord. Notez que les hautes latences peuvent être la faute de limites de taux ou du bot lui-même, ce n'est pas une mesure absolue.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Ping
@@ -202,29 +203,29 @@ Ping
 
 ### Poll
 
-Create very simple reaction poll. Example: `poll "favorite color?" blue red pink`
+Crée des sondages très simples. Exemple: `poll "Couleur favorite ?" bleu rouge vert`
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Poll <Topic:Text - Description of the poll> <Option1:Text> <Option2:Text> [Option3:Text] [Option4:Text] [Option5:Text] [Option6:Text] [Option7:Text] [Option8:Text] [Option9:Text] [Option10:Text]
+Poll <Sujet:Texte - Description du sondage> <Option1:Texte> <Option2:Texte> [Option3:Texte] [Option4:Texte] [Option5:Texte] [Option6:Texte] [Option7:Texte] [Option8:Texte] [Option9:Texte] [Option10:Texte]
 ```
 
 ### Prefix
 
-Shows command prefix of the current server, or the specified server
+Montre le préfixe du serveur actuel, ou du serveur spécifié
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Prefix [Server ID:Whole number]
+Prefix [ID du serveur:Nombre entier]
 ```
 
 ### Reminders
 
-Lists your active reminders
+Liste vos rappels actifs
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Reminders
@@ -232,25 +233,25 @@ Reminders
 
 ### Remindme
 
-**Aliases:** remind/reminder
+**Alias:** remind/reminder
 
-Schedules a reminder, example: 'remindme 1h30min are you alive still?'
+Programme un rappel, exemple: 'remindme 1h30min Toujours en vie ?'
 
-**Usage:**
-
-```
-Remindme <Time:Duration> <Message:Text>
-```
+**Utilisation :**&#x20;
 
 ```
-[-channel channel:Channel]
+Remindme <Temps:Duration> <Message:Texte>
+```
+
+```
+[-channel salon:Channel]
 ```
 
 ### \~ResetPastNames
 
-Reset your past usernames/nicknames.
+Réinitialise vos anciens noms/surnoms.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 ResetPastNames
@@ -258,66 +259,66 @@ ResetPastNames
 
 ### Role
 
-Toggle a role on yourself or list all available roles, they have to be set up in the control panel first, under 'rolecommands'
+Ajoutez ou retirez-vous un rôle, ou listez les rôles disponibles, qui doivent définis dans le panneau de commande, sous le panneau ([self-assignable-roles.md](../tools-and-utilities/self-assignable-roles.md "mention"))
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Role [Role:Text]
+Role [Role:Texte]
 ```
 
 ### Settimezone
 
-**Aliases:** setz/tzset
+**Alias:** setz/tzset
 
-Sets your timezone, used for various purposes such as auto conversion. Give it your country.
+Définissez votre fuseau horaire, utilisé pour de nombreuses choses, comme la conversion automatique. Ajoutez-y votre pays.
 
-**Usage:**
-
-```
-Settimezone [Timezone:Text]
-```
+**Utilisation :**&#x20;
 
 ```
-[-u Display current:Switch]
-[-d Delete TZ record:Switch]
+Settimezone [Fuseau Horaire:Texte]
+```
+
+```
+[-u Montre le fuseau actuel:Switch]
+[-d Supprime le fuseau enregistré:Switch]
 ```
 
 ### SimpleEmbed
 
-**Aliases:** se
+**Alias:** se
 
-A more simpler version of CustomEmbed, controlled completely using switches.\
-You can edit existing messages by supplying the `-message` flag.
+Une version plus simple de la commande **CustomEmbed**, en utilisant seulement des options.\
+Vous pouvez modifier des messages existants avec l'option `-message`.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 SimpleEmbed
 ```
 
 ```
-[-channel :Channel - Optional channel to send in]
-[-message message:Whole number - Optional message ID to edit]
-[-content :Text - Text content for the message]
-[-title :Text]
-[-desc :Text - Text in the 'description' field]
-[-color :Text - Either hex code or name]
-[-url :Text - Url of this embed]
-[-thumbnail :Text - Url to a thumbnail]
-[-image :Text - Url to an image]
-[-author :Text - The text in the 'author' field]
-[-authoricon :Text - Url to a icon for the 'author' field]
-[-authorurl :Text - Url of the 'author' field]
-[-footer :Text - Text content for the footer]
-[-footericon :Text - Url to a icon for the 'footer' field]
+[-channel :Channel - Salon où envoyer le message]
+[-message message:Nombre entier - ID du message à éditer]
+[-content :Texte - Contenu du message]
+[-title :Texte - Titre de l'embed]
+[-desc :Texte - Texte dans le champs 'description']
+[-color :Texte - Code hexadécimal ou nom]
+[-url :Texte - URL de cet embed]
+[-thumbnail :Texte - URL de l'image de la vignette]
+[-image :Texte - URL de l'image]
+[-author :Texte - le texte dans le champs 'author']
+[-authoricon :Texte - URL pour une icône dans la champs 'author']
+[-authorurl :Texte - URL pour le champs 'author']
+[-footer :Texte - Contenu texte du pied de l'embed]
+[-footericon :Texte - URL pour une icon du champs 'footer']
 ```
 
-### Stats&#x20;
+### Stats
 
-Shows server stats (if public stats are enabled). This command is only available if collecting statistics is enabled bot not user side. Disabled for YAGPDB.
+Montre les statistiques du serveur (si les statistiques publiques sont activées). Cette commande est seulement disponible si la collecte des statistiques est activée, pas du côté utilisateur. Désactivé pour YAGPDB
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Stats
@@ -325,103 +326,103 @@ Stats
 
 ### ToggleTimeConversion
 
-**Aliases:** toggletconv/ttc
+**Alias:** toggletconv/ttc
 
-Toggles automatic time conversion for people with registered timezones (setz) in this channel, its on by default, toggle all channels by giving it `all`
+Active/Désactive la conversion automatique pour les personnes qui ont un fuseau horaire enregistré, activé par défaut, modifiez tous les salons avec l'option `all`
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-ToggleTimeConversion [flags:Text]
+ToggleTimeConversion [flags:Texte]
 ```
 
 ### Undelete
 
-**Aliases:** ud
+**Alias:** ud
 
-&#x20;Views the first 10 recent deleted messages. By default, only the current user's deleted messages will show. You can use the `-a` flag to view all users delete messages, or `-u` to view a specified user's deleted messages. Both `-a` and `-u` require Manage Messages permission. Note: `-u` overrides `-a` meaning even though `-a` might've been specified along with `-u` only messages from the user provided using `-u` will be shown.
+Voir les 10 derniers messages supprimés. Par défaut, seul vos messages effacés sont affichés. Vous pouvez utiliser l'option `-a` pour voir les messages effacés de tous les utilisateurs, ou `-u` pour ceux d'un utilisateur spécifique. L'utilisation simultanée de `-a` et `-u` nécessite la permission **Gérer les messages** (_Manage Messages_). Note : `-u` prend le pas sur `-a` ce qui veut dire que `-a` utilisé avec `-u` montre uniquement les messages de l'utilisateur ciblé par l'option `-u`.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Undelete
 ```
 
 ```
-[-a a:Switch - from all users]
-[-u u:Mention/ID - from a specific user]
-[-channel channel:Channel - Optional target channel]
+[-a a:Switch - de tous les utilisateurs]
+[-u u:Mention/ID - d'un utilisateur spécifique]
+[-channel channel:Channel - Salon cible optionnel]
 ```
 
 ### \~Usernames
 
-**Aliases:** unames/un
+**Alias:** unames/un
 
-Shows past usernames of a user. Only shows up to the last 25 usernames.
+Montre les derniers pseudos d'un utilisateur. Montre les 25 derniers pseudos.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Usernames [User:User]
+Usernames [Utilisateur:User]
 ```
 
 ### ViewPerms
 
-Shows you or the targets permissions in this channel
+Vous montre les permissions de la cible dans le salon.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-ViewPerms [target:Mention/ID]
+ViewPerms [cible:Mention/ID]
 ```
 
 ### Whois
 
-**Aliases:** whoami
+**Alias:** whoami
 
-Shows information about a user
+Montre les informations sur un utilisateur
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Whois [User:Member]
+Whois [Utilisateur:Member]
 ```
 
 ## Fun 🎉
 
 ### Define
 
-**Aliases:** df
+**Alias:** df
 
-Look up an urban dictionary definition, default paginated view.
+Regarde une définition dans un dictionnaire, vue paginée par défaut.
 
-**Usage:**
-
-```
-Define <Topic:Text>
-```
+**Utilisation :**&#x20;
 
 ```
-[-raw raw:Switch - Raw output]
+Define <Sujet:Texte>
+```
+
+```
+[-raw raw:Switch - Sortie brute]
 ```
 
 ### Weather
 
-**Aliases:** w
+**Alias:** w
 
-Shows the weather somewhere
+Montre la météo à un endroit
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Weather <Where:Text>
+Weather <Où:Text>
 ```
 
 ### Topic
 
-Generates a conversation topic to help chat get moving.
+Génère un sujet de conversation - en anglais - pour aider le chat à s'animer.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Topic
@@ -429,11 +430,11 @@ Topic
 
 ### CatFact
 
-**Aliases:** cf/cat/catfacts
+**Alias:** cf/cat/catfacts
 
-Cat Facts
+Des petits faits sur les chats
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 CatFact
@@ -441,9 +442,9 @@ CatFact
 
 ### DadJoke
 
-Generates a dad joke using the API from icanhazdadjoke.
+Génère une blague de papa en utilisant l'API de icanhazdadjoke.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 DadJoke
@@ -453,9 +454,9 @@ DadJoke
 
 **Aliases:** dog/dogfacts
 
-Dog Facts
+Fait sur les chiens
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 DogFact
@@ -463,118 +464,118 @@ DogFact
 
 ### Advice
 
-Don't be afraid to ask for advice!
+Ne soyez pas effrayé de demander un conseil !
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Advice [What:Text]
+Advice [Quoi:Texte]
 ```
 
 ### Throw
 
-Throwing things is cool.
+Jeter des choses est cool.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Throw [Target:User]
+Throw [Cible:User]
 ```
 
 ### Roll
 
-Roll dices, specify nothing for 6 sides, specify a number for max sides, or rpg dice syntax. Example: `-roll 2d6`
+Roll dices, specify nothing for 6 sides, specify a number for max sides, or rpg dice syntax. \
+Exemple: `-roll 2d6`
 
-**Usage:**
+**Utilisation :**&#x20;
 
-```
-Roll <Sides:Whole number>
-Roll <RPG Dice:Text>
+<pre><code>Roll &#x3C;Côtés:Whole number>
+Roll &#x3C;<a data-footnote-ref href="#user-content-fn-1">RPG</a> Dice:Text>
 Roll
-```
+</code></pre>
 
 ### WouldYouRather
 
-**Aliases:** wyr
+**Alias:** wyr
 
-Get presented with 2 options.
+2 options vous seront présentées.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 WouldYouRather
 ```
 
 ```
-[-raw raw:Switch - Raw output]
+[-raw raw:Switch - Sortie brute]
 ```
 
 ### Xkcd
 
-An xkcd comic, by default returns random comic strip
+Renvoie un comic xkcd, par défaut en retourne un aléatoire
 
-**Usage:**
-
-```
-Xkcd [Comic number:Whole number]
-```
+**Utilisation :**&#x20;
 
 ```
-[-l Latest comic:Switch]
+Xkcd [Numéro du comic:Nombre entier]
+```
+
+```
+[-l Dernier comic:Switch]
 ```
 
 ### Howlongtobeat
 
-**Aliases:** hltb
+**Alias:** hltb
 
-Game information based on query from howlongtobeat.com. Results are sorted by popularity, it's their default. Without -p returns the first result. Switch -p gives paginated output using Levenshtein distance sorting max 20 results.
+Information sur le jeu basée sur howlongtobeat.com. Les résultats sont classé par popularité, c'est leur choix. Sans l'option -p cela retourne le premier résultat. l'option -p donne une sortie paginée en utilisant le classement de Levenshtein, rangeant au plus 20 résultats
 
-**Usage:**
-
-```
-HowLongToBeat <Game-Title:Text>
-```
+**Utilisation :**&#x20;
 
 ```
-[-c c:Switch - Compact output]
-[-p p:Switch - Paginated output]
+HowLongToBeat <Nom-du-jeu:Text>
+```
+
+```
+[-c c:Switch - Sortie comptacte]
+[-p p:Switch - Sortie paginée]
 ```
 
 ### Inspire
 
-**Aliases:** insp
+**Alias:** insp
 
-Shows 'inspirational' quotes from inspirobot.me...
+Montre une citation de inspirobot.me...
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Inspire
 ```
 
 ```
-[-mindfulness mindfulness:Switch - Generates Mindful Quotes!]
+[-mindfulness mindfulness:Switch - Génère une citation pleine de sens !]
 ```
 
 ### Forex
 
-**Aliases:** Money
+**Alias:** Money
 
-💱 convert value from one currency to another.
+💱 Conversion d'une monnaie vers une autre.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Forex <Amount:Decimal number> <From:Text> <To:Text>
+Forex <Amount:Nombre décimal> <Depuis:Texte> <Vers:Texte>
 ```
 
 ### Roast
 
-**Aliases:** insult
+**Alias:** insult
 
-Sends a random roast
+Envoie une "pique" aléatoire
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 Roast [Target:User]
@@ -582,141 +583,141 @@ Roast [Target:User]
 
 ### TopServers
 
-Responds with the top 15 servers I'm on
+Répond avec les 15 plus gros serveurs sur lequel je suis
 
-**Usage:**
-
-```
-TopServers [Skip:Whole number - Entries to skip]
-```
+**Utilisation :**&#x20;
 
 ```
-[-id serverID:Whole number]
+TopServers [Skip:Nombre entier - Entrée à sauter]
+```
+
+```
+[-id serverID:Nombre entier]
 ```
 
 ### dictionary
 
-**Aliases:** owldict/owl/dict
+**Alias:** owldict/owl/dict
 
-Get the definition of an English word using the dictionaryapi.dev
+Récupère la définition d'un mot anglais depuis le dictionaryapi.dev
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-dictionary <Query:Text - Word to search for>
+dictionary <Query:Texte - Mot à rechercher>
 ```
 
 ### TakeRep
 
-**Aliases:** -/tr/trep/-rep
+**Alias:** -/tr/trep/-rep
 
-Takes away rep from someone
+Enlève de la rep à quelqu'un
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-TakeRep <User:User> [Num:Whole number]
+TakeRep <User:Utilisateur> [Num:Nombre entier]
 ```
 
 ### GiveRep
 
-**Aliases:** +/gr/grep/+rep
+**Alias:** +/gr/grep/+rep
 
-Gives rep to someone
+Donne de la rep à quelqu'un
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-GiveRep <User:User> [Num:Whole number]
+GiveRep <User:Utilisateur> [Num:Nombre entier]
 ```
 
 ### SetRep
 
-**Aliases:** SetRepID
+**Alias:** SetRepID
 
-Sets someones rep, this is an admin command and bypasses cooldowns and other restrictions.
+Définir la réputation de quelqu'un, c'est une commande administrateur et ne respecte pas les cooldowns et autres restrictions.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-SetRep <User:Mention/ID> <Num:Whole number>
+SetRep <Utilisateur:Mention/ID> <Nombre:Nombre entier>
 ```
 
 ### DelRep
 
-Deletes someone from the reputation list completely, this cannot be undone.
+Supprime quelqu'un de la liste de réputation complètement, ceci ne peut pas être annulé.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-DelRep <User:Mention/ID>
+DelRep <Utilisateur:Mention/ID>
 ```
 
 ### RepLog
 
-**Aliases:** replogs
+**Alias:** replogs
 
-Shows the rep log for the specified user.
+Montre l'historique de réputation d'un utilisateur.
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-RepLog <User:Mention/ID> [Page:Whole number]
+RepLog <Utilisateur:Mention/ID> [Page:Nombre entier]
 ```
 
 ### Rep
 
-Shows yours or the specified users current rep and rank
+Montre votre réputation et votre rang ou ceux de l'utilisateur mentionné
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-Rep [User:User]c
+Rep [Utilisateur:User]
 ```
 
 ### TopRep
 
-Shows rep leaderboard on the server
+Montre le classement du serveur
 
-**Usage:**
-
-```
-TopRep [Offset:Whole number]
-```
+**Utilisation :**&#x20;
 
 ```
-[-user user:Mention/ID - User to search for in the leaderboard]
+TopRep [Décalage:Nombre entier]
+```
+
+```
+[-user user:Mention/ID - Utilisateur à rechercher dans le classement]
 ```
 
 ### 8Ball
 
-Ask the magic 8ball a question
+Posez une question à 8ball
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
-8Ball [Question:Text]
+8Ball [Question:Texte]
 ```
 
 ### Soundboard
 
-**Aliases:** sb
+**Alias:** sb
 
-Play, or list soundboard sounds
+Jouer ou lister les sons du soundboard
 
 **Usage:**
 
 ```
-Soundboard [Name:Text]
+Soundboard [Nom:Texte]
 ```
 
 ### SoundboardReset
 
-**Aliases:** sbclose/sbreset
+**Alias:** sbclose/sbreset
 
-Reset Soundboard Player
+Réinitialise le Player du Soundboard
 
-**Usage:**
+**Utilisation :**&#x20;
 
 ```
 SoundboardReset
@@ -724,7 +725,7 @@ SoundboardReset
 
 ### cah Create
 
-**Aliases:** c
+**Alias:** c
 
 Creates a Cards Against Humanity game in this channel, add packs after commands, or \* for all packs. (-v for vote mode without a card czar).
 
@@ -949,7 +950,7 @@ sleep
 
 Responds with state debug info. Bot Admin Only
 
-**Usage:**&#x20;
+**Usage:**
 
 ```
 state botmember
@@ -1169,8 +1170,6 @@ Reports a member to the server's staff
 Report <User:Mention/ID> <Reason:Text>
 ```
 
-
-
 ### Clean
 
 **Aliases:** clear/cl
@@ -1349,7 +1348,7 @@ Logs [skip:Whole number]
 
 ### automod ListViolations
 
-**Aliases:**  Violations/ViolationLogs/VLogs/VLog
+**Aliases:** Violations/ViolationLogs/VLogs/VLog
 
 Lists Violations of specified user /n old flag posts oldest violations in first page ( from oldest to newest ).
 
@@ -1365,7 +1364,7 @@ ListViolations <User:Mention/ID> [Page Number:Whole number]
 
 ### automod ListViolationsCount
 
-**Aliases:**  ViolationsCount/VCount
+**Aliases:** ViolationsCount/VCount
 
 Lists Violations summary in entire server or of specified user optionally filtered by max violation age. Specify number of violations to skip while fetching using -skip flag ; max entries fetched 500.
 
@@ -1382,7 +1381,7 @@ ListViolationsCount [User:Mention/ID]
 
 ### automod DeleteViolation
 
-**Aliases:**  DelViolation/DelV/DV
+**Aliases:** DelViolation/DelV/DV
 
 Deletes a Violation with the specified ID. ID is the first number of each Violation in the ListViolations command.
 
@@ -1394,7 +1393,7 @@ DeleteViolation <ID:Whole number>
 
 ### automod ClearViolations
 
-**Aliases:**  ClearV/ClrViolations/ClrV
+**Aliases:** ClearV/ClrViolations/ClrV
 
 Clears Violations of specified user optionally filtered by Name, Min/Max age and other conditions. By default, more recent violations are preferentially cleared.
 
@@ -1645,3 +1644,5 @@ Force cancels the current setup session in this channel
 ```
 StopSetup
 ```
+
+[^1]: RPG : Role-Play Game : Jeu de Rôle
